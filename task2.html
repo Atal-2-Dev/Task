@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">TASKStudy</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="All-notes.html"><i class="fas fa-book"></i> Notes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>DBMS Keys Explanation</title>
+        </head>
+        <body>
+            <h1>DBMS Keys</h1>
+            <h2>Introduction to Keys in DBMS</h2>
+            <p>Keys are the unique identifiers used in DBMS to uniquely identify a tuple(s) or rows in a table. Understanding keys is crucial for database management and ensuring data integrity.</p>
+            <h2>University Database Example</h2>
+            <p>Let's consider the following tables for our university database:</p>
+        
+            <h3>1. Students Table</h3>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>RegistrationNumber</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rakesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Computer Science</td>
+                    <td>112233</td>
+                    <td>rakesh@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aakash Sherpa</td>
+                    <td>Pokhara</td>
+                    <td>Electronics</td>
+                    <td>223344</td>
+                    <td>aakash@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sital Thapa</td>
+                    <td>Bhaktapur</td>
+                    <td>Mechanical</td>
+                    <td>334455</td>
+                    <td>sital@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Krishna Bhusal</td>
+                    <td>Lalitpur</td>
+                    <td>Civil</td>
+                    <td>445566</td>
+                    <td>krishna@example.com</td>
+                </tr>
+            </table>
+        
+            <h3>2. Courses Table</h3>
+            <table>
+                <tr>
+                    <th>CourseID</th>
+                    <th>CourseName</th>
+                    <th>Credits</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>Data Structures</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Database Management</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Operating Systems</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Networks</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        
+            <h3>3. Enrollments Table</h3>
+            <table>
+                <tr>
+                    <th>StudentID</th>
+                    <th>CourseID</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>Lead</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>102</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>Lead</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>Lead</td>
+                </tr>
+            </table>
+        
+            <h2>Types of Keys</h2>
+            
+            <h3>Primary Key</h3>
+            <p>A primary key is a field (or a combination of fields) that uniquely identifies each record in a table. It ensures that every record is unique and not null.</p>
+            <p><strong>Example:</strong> In the Students table, <em>ID</em> is the primary key.</p>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>RegistrationNumber</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rakesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Computer Science</td>
+                    <td>112233</td>
+                    <td>rakesh@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aakash Sherpa</td>
+                    <td>Pokhara</td>
+                    <td>Electronics</td>
+                    <td>223344</td>
+                    <td>aakash@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sital Thapa</td>
+                    <td>Bhaktapur</td>
+                    <td>Mechanical</td>
+                    <td>334455</td>
+                    <td>sital@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Krishna Bhusal</td>
+                    <td>Lalitpur</td>
+                    <td>Civil</td>
+                    <td>445566</td>
+                    <td>krishna@example.com</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> The ID must be unique for each student, ensuring no two students have the same ID and every student can be uniquely identified.</p>
+        
+            <h3>Foreign Key</h3>
+            <p>A foreign key is a field (or a combination of fields) in one table that refers to the primary key in another table. It creates a relationship between the two tables.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>In the Enrollments table, <em>StudentID</em> is a foreign key that refers to <em>ID</em> in the Students table.</li>
+                <li>In the Enrollments table, <em>CourseID</em> is a foreign key that refers to <em>CourseID</em> in the Courses table.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>StudentID</th>
+                    <th>CourseID</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>Lead</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>102</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>Lead</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>Lead</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> It links Enrollments with Students and Courses, ensuring that every StudentID and CourseID in Enrollments corresponds to valid entries in Students and Courses, respectively.</p>
+        
+            <h3>Composite Key</h3>
+            <p>A composite key uses two or more columns to uniquely identify a record in a table.</p>
+            <p><strong>Example:</strong> In the Enrollments table, <em>StudentID</em> and <em>CourseID</em> together form the composite key.</p>
+            <table>
+                <tr>
+                    <th>StudentID</th>
+                    <th>CourseID</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>101            <td>Lead</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>102</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>Lead</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>Lead</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> The combination of StudentID and CourseID uniquely identifies each enrollment record, ensuring no duplication.</p>
+        
+            <h3>Alternate Key</h3>
+            <p>An alternate key is any candidate key that is not chosen as the primary key. These are unique identifiers that can also be used to access records.</p>
+            <p><strong>Example:</strong> In the Students table, <em>RegistrationNumber</em> could serve as an alternate key.</p>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>RegistrationNumber</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rakesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Computer Science</td>
+                    <td>112233</td>
+                    <td>rakesh@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aakash Sherpa</td>
+                    <td>Pokhara</td>
+                    <td>Electronics</td>
+                    <td>223344</td>
+                    <td>aakash@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sital Thapa</td>
+                    <td>Bhaktapur</td>
+                    <td>Mechanical</td>
+                    <td>334455</td>
+                    <td>sital@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Krishna Bhusal</td>
+                    <td>Lalitpur</td>
+                    <td>Civil</td>
+                    <td>445566</td>
+                    <td>krishna@example.com</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> RegistrationNumber is unique for each student and can be used to identify students, ensuring data integrity.</p>
+        
+            <h3>Candidate Key</h3>
+            <p>Candidate keys are the set of fields from which the primary key is selected. Each candidate key can uniquely identify records in a table.</p>
+            <p><strong>Example:</strong> In the Students table, both <em>ID</em> and <em>RegistrationNumber</em> are candidate keys.</p>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>RegistrationNumber</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rakesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Computer Science</td>
+                    <td>112233</td>
+                    <td>rakesh@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aakash Sherpa</td>
+                    <td>Pokhara</td>
+                    <td>Electronics</td>
+                    <td>223344</td>
+                    <td>aakash@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sital Thapa</td>
+                    <td>Bhaktapur</td>
+                    <td>Mechanical</td>
+                    <td>334455</td>
+                    <td>sital@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Krishna Bhusal</td>
+                    <td>Lalitpur</td>
+                    <td>Civil</td>
+                    <td>445566</td>
+                    <td>krishna@example.com</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> Candidate keys are essential in selecting the best primary key that ensures unique identification of records.</p>
+        
+            <h3>Super Key</h3>
+            <p>A super key is a set of one or more columns that can be used to uniquely identify a record in a table. Every primary key is a super key, but not every super key is a primary key.</p>
+            <p><strong>Example:</strong> In the Students table, <em>ID</em>, <em>RegistrationNumber</em>, and <em>Email</em> together can be a super key.</p>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>RegistrationNumber</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rakesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Computer Science</td>
+                    <td>112233</td>
+                    <td>rakesh@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aakash Sherpa</td>
+                    <td>Pokhara</td>
+                    <td>Electronics</td>
+                    <td>223344</td>
+                    <td>aakash@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sital Thapa</td>
+                    <td>Bhaktapur</td>
+                    <td>Mechanical</td>
+                    <td>334455</td>
+                    <td>sital@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Krishna Bhusal</td>
+                    <td>Lalitpur</td>
+                    <td>Civil</td>
+                    <td>445566</td>
+                    <td>krishna@example.com</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> Super keys help in understanding all possible ways to identify records uniquely and assist in database normalization.</p>
+        
+            <h3>Unique Key</h3>
+            <p>A unique key is a set of fields in a table that must hold unique values. Unlike primary keys, unique keys can have null values.</p>
+            <p><strong>Example:</strong> In the Students table, <em>Email</em> can be a unique key.</p>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>RegistrationNumber</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rakesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Computer Science</td>
+                    <td>112233</td>
+                    <td>rakesh@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aakash Sherpa</td>
+                    <td>Pokhara</td>
+                    <td>Electronics</td>
+                    <td>223344</td>
+                    <td>aakash@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sital Thapa</td>
+                    <td>Bhaktapur</td>
+                    <td>Mechanical</td>
+                    <td>334455</td>
+                    <td>sital@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Krishna Bhusal</td>
+                    <td>Lalitpur</td>
+                    <td>Civil</td>
+                    <td>445566</td>
+                    <td>krishna@example.com</td>
+                </tr>
+            </table>
+            <p><strong>Why It Matters:</strong> Unique keys help in enforcing uniqueness for specific columns where unique identification is necessary but without the restriction of being a primary key.</p>
+        
+    <footer>
+        <pre>Contact: info@taskstudy.com | Phone: 9811573294            &copy; 2024 TASKStudy. All rights reserved.</pre>
+    </footer>
+</body>
+</html>

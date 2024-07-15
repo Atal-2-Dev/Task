@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style6.css">
+    <title>Database Models</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">TASKStudy</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="All-notes.html"><i class="fas fa-book"></i> Notes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <h2>Database Models</h2>
+
+        <h3>Hierarchical Database Model</h3>
+        <p>The hierarchical database model is one of the earliest database models, which organizes data in a tree-like structure. Each record has a single parent and can have multiple children, creating a hierarchy of data. This model is designed to represent data relationships and dependencies, making it suitable for applications with a clear hierarchical relationship, such as organizational structures or file systems. The primary advantage of the hierarchical model is its simplicity and fast access due to the predefined tree structure. However, it has limitations, such as data redundancy and inflexibility in accommodating complex many-to-many relationships. Modifying the hierarchy or adding new levels can be challenging and require restructuring the entire database.</p>
+
+        <h3>Network Database Model</h3>
+        <p>The network database model extends the hierarchical model by allowing more complex relationships between entities. In this model, data is represented as a graph where records are nodes and relationships are edges. This flexibility enables the network model to support many-to-many relationships, providing a more realistic representation of real-world scenarios. The network model is highly efficient in handling complex queries and navigating relationships due to its direct pointers between related records. However, it is more complex to design and maintain compared to the hierarchical model. The network model requires careful management of pointers and can become difficult to navigate if the database grows large or relationships become overly intricate.</p>
+
+        <h3>Relational Database Model</h3>
+        <p>The relational database model, introduced by E.F. Codd in the 1970s, is the most widely used database model today. It organizes data into tables (relations) consisting of rows (tuples) and columns (attributes). Each table represents an entity, and relationships between entities are established through foreign keys. The relational model is highly flexible, allowing users to perform complex queries and data manipulation using Structured Query Language (SQL). One of its key strengths is data integrity, maintained through normalization processes that reduce data redundancy and ensure consistency. The relational model's simplicity and powerful querying capabilities have made it the standard for most database applications. However, it may face performance issues with very large datasets and complex join operations.</p>
+
+        <h3>Object-Oriented Database Model</h3>
+        <p>The object-oriented database model integrates object-oriented programming principles with database management. In this model, data is stored as objects, similar to how data is managed in object-oriented programming languages. Objects contain both data (attributes) and methods (functions) that operate on the data. This model provides a seamless integration between the database and application code, allowing for more natural data representation and manipulation. It supports complex data types and relationships, making it suitable for applications with intricate data structures, such as multimedia databases or engineering design systems. The object-oriented model also promotes reusability and encapsulation. However, it is less widely adopted compared to the relational model, and transitioning from traditional relational databases can be challenging due to differences in data modeling and querying approaches.</p>
+    </div>
+    <footer>
+        <pre>Contact: info@taskstudy.com | Phone: 9811573294            &copy; 2024 TASKStudy. All rights reserved.</pre>
+    </footer>
+</body>
+</html>

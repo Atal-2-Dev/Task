@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style5.css">
+    <title>Database Relationships</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">TASKStudy</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="All-notes.html"><i class="fas fa-book"></i> Notes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <h2>Database Relationships</h2>
+
+        <h3>Understanding Relationships in Databases</h3>
+        <p>In the context of database management systems, relationships are crucial as they define how data in one table is related to data in another. Establishing relationships between tables helps in organizing data efficiently and ensures data integrity. There are three primary types of relationships in databases: one-to-one, one-to-many, and many-to-many. Each type of relationship serves different purposes and is used to model various real-world scenarios.</p>
+
+        <h3>One-to-One Relationship</h3>
+        <p>A one-to-one relationship occurs when a single record in one table is associated with a single record in another table. This type of relationship is less common but can be used to split data into two tables for various reasons, such as improving security or reducing redundancy. For example, in a database for managing employee information, sensitive information like social security numbers might be stored in a separate table with a one-to-one relationship to the main employee table. One-to-one relationships are implemented using primary keys and foreign keys to ensure that each record in both tables corresponds to exactly one record in the other table.</p>
+
+        <h3>One-to-Many Relationship</h3>
+        <p>The one-to-many relationship is the most common type of relationship in databases. In this type, a single record in one table (the parent table) can be related to multiple records in another table (the child table). For instance, in a school database, a single class (parent table) can have many students (child table). This relationship is implemented by having a foreign key in the child table that references the primary key of the parent table. One-to-many relationships are fundamental for organizing data efficiently, allowing for the representation of hierarchical and dependent data structures.</p>
+
+        <h3>Many-to-Many Relationship</h3>
+        <p>A many-to-many relationship occurs when multiple records in one table are associated with multiple records in another table. This type of relationship is used to model complex associations between entities. For example, in a library database, books and authors have a many-to-many relationship because a single book can have multiple authors, and a single author can write multiple books. Many-to-many relationships are typically implemented using a junction table (or associative table) that contains foreign keys referencing the primary keys of the two related tables. This junction table breaks down the many-to-many relationship into two one-to-many relationships, simplifying the data structure and ensuring referential integrity.</p>
+
+        <h3>Self-Referencing Relationship</h3>
+        <p>A self-referencing relationship is a special type of relationship where a table has a relationship with itself. This occurs when a record in a table is related to another record in the same table. A common example is an employee table where each employee record may reference another employee record that represents their manager. Self-referencing relationships are used to model hierarchical data within the same entity, such as organizational charts or nested categories. They are implemented using a foreign key that references the primary key of the same table, enabling recursive relationships within the table.</p>
+    </div>
+    <footer>
+        <pre>Contact: info@taskstudy.com | Phone: 9811573294            &copy; 2024 TASKStudy. All rights reserved.</pre>
+    </footer>
+</body>
+</html>
