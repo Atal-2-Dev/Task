@@ -157,6 +157,8 @@ body {
     background-color: #3E362E;
     color: #FFFFFF;
     padding: 20px 0;
+    top: 230px;
+    position: relative;
 }
 
 .footer-content {
