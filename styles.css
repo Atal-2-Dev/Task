@@ -152,21 +152,24 @@ body {
         transform: translateX(-100%);
     }
 }
-
 .footer {
     background-color: #3E362E;
     color: #FFFFFF;
     padding: 20px;
     position: fixed;
     left: 0;
-    bottom: o;
-    right: 0;
+    bottom: 0; 
+/*     right: 0; */
+    width: 100%;
+    z-index: 100;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .footer-section {
