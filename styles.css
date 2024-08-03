@@ -156,10 +156,11 @@ body {
 .footer {
     background-color: #3E362E;
     color: #FFFFFF;
-    padding: 20px 0;
+    padding: 20px;
     position: fixed;
     left: 0;
     bottom: o;
+    right: 0;
 }
 
 .footer-content {
